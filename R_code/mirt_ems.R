@@ -1,15 +1,15 @@
 #' ----------------------------------
-#' title :  E-MS sp for M2PL model
+#' title :  E-MS for M2PL model
 #' author:  Laixu3107
 #' date  :  2020.12.20
 #' ----------------------------------
+
 
 if(sys.nframe() == 0L){rm(list=ls()); gc()}
 # ---- Needed Packages ----
 library(glmnet)     # logistic regression
 library(mvtnorm)    # dmvnorm
 library(progress)   # progress bar
-
 
 # ---- Some Useful Function ----
 Grid_pts <- function(K, lb=-4, ub=4, np=11){
@@ -26,7 +26,6 @@ Grid_pts <- function(K, lb=-4, ub=4, np=11){
   colnames(grid_pts) <- NULL
   return(grid_pts)
 }
-
 
 Compute_p_tilde <- function(y, x_grid, A, b, mu, sigma){
   # y        : responses of all subjects, a matrix with N*J.
@@ -51,7 +50,6 @@ Compute_p_tilde <- function(y, x_grid, A, b, mu, sigma){
   } 
   return(prob)
 }
-
 
 List_Candidate_Models <- function(K){
   # List all candidate sub-models.
