@@ -8,7 +8,7 @@ In our paper (Xu et al., 2021), we consider the multidimensional two-parameter l
 and apply the expectation model selection (EMS; Jiang et al., 2015) algorithm to find the optimal model (i.e., the incidence matrix)
 and the parameter estimates (including the item discrimination and difficulty parameters) under optimal model which results in the smallest BIC value.
 
-There are three files in the **R-code** directory:
+There are three files in the **R_code** directory:
 
 - **MIRT_EML1.R** implements the EM-based L1 regularization for MIRT (Sun et al., 2016).
 - **MIRT_EMS.R** implements the EMS algorithm for MIRT (Xu et al., 2021).
